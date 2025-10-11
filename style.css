@@ -1,0 +1,505 @@
+:root {
+  --rojo: #b62828;
+  --gris: #f4f4f4;
+  --negro: #222;
+  --blanco: #fff;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: var(--gris);
+  color: var(--negro);
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  background: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  height: 70px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--negro);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--rojo);
+}
+
+.hero {
+  background-image: url("assets/portada.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.61); /* oscurece el fondo para que resalte el texto */
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+
+
+.hero h1 {
+  font-size: 4rem; /* más grande */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin-bottom: 50px;
+}
+
+.btn {
+  background-color: #b91c1c;
+  color: #fff;
+  padding: 15px 45px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-bottom: 40px;
+}
+
+
+.btn:hover {
+  background-color: #991b1b;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.nosotros {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.nosotros h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  
+  align-items: center;
+  gap: 32px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.about img.jh-img {
+  width: 320px;      /* ajusta aquí el tamaño que quieras */
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.about-text{
+  background: var(--blanco);
+  margin: 40px 0;
+  border-radius: 12px;
+  /*box-shadow: 0 2px 8px rgba(0,0,0,0.05);*/
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+.about-text p{
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+
+/* ==== Misión y Visión ==== */
+.misionvision {
+  width: 100vw;
+  background-color: #f7f7f700;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.misionvision h2 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.mv-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.mv-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  padding: 30px 25px;
+  flex: 1;
+  min-width: 450px;
+  text-align: left;
+  color: #111;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+.mv-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mv-card .icon {
+  font-size: 2rem;
+  color: #b91c1c;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mv-card:hover .icon {
+  transform: scale(1.15);
+  color: #991b1b;
+}
+
+.mv-card h3 {
+  color: #b91c1c;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.products {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.products, .about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.product-card {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card img {
+  width: 100%;
+  height: 220px;         /* Tamaño uniforme para todas las imágenes */
+  object-fit: cover;     /* Recorta suavemente sin deformar */
+  border-radius: 12px;   /* Bordes redondeados como las tarjetas */
+  margin-bottom: 15px;   /* Espacio debajo de la imagen */
+}
+
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.product-card h3 {
+  color: #b91c1c;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.product-card p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact {
+  /*background: var(--blanco);*/
+  margin: 40px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /*max-width: 1300px;*/
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+.contact h2 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.contact .social {
+  margin-top: 30px;
+}
+
+.contact .social a {
+  font-size: 1.1rem;
+  margin: 0 15px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.contact .social a:hover {
+  transform: scale(1.1);
+}
+
+.contact .social i {
+  margin-right: 8px;
+}
+
+.map-container {
+
+  margin: 40px auto 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  display: block;
+}
+
+
+
+/* FOOTER */
+footer {
+  background: var(--rojo);
+  color: var(--blanco);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* ===================================
+   RESPONSIVE MÓVILES MODERNOS
+   =================================== */
+@media (max-width: 768px) {
+  /* === HEADER === */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  header .logo {
+    height: 55px;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  /* === HERO === */
+  .hero {
+    height: 90vh;
+    padding: 0 20px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+  }
+
+  /* === SECCIÓN NOSOTROS === */
+  .nosotros {
+    padding: 60px 15px;
+  }
+
+  .nosotros h2 {
+    font-size: 2rem;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .about img.jh-img {
+    width: 60%;
+    max-width: 250px;
+  }
+
+  .about-text {
+    padding: 25px 20px;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  /* === MISIÓN Y VISIÓN === */
+  .misionvision h2 {
+    font-size: 2rem;
+  }
+
+  .mv-container {
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .mv-card {
+    min-width: unset;
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .mv-header {
+    justify-content: center;
+  }
+
+  .mv-card h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .mv-card p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  /* === PRODUCTOS === */
+
+  .products h2 {
+    font-size: 2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .product-card {
+    padding: 20px;
+  }
+
+  .product-card h3 {
+    font-size: 1.3rem;
+  }
+
+  /* === CONTACTO === */
+  .contact {
+    padding: 30px 20px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .map-container iframe {
+    height: 280px;
+  }
+
+  /* === FOOTER === */
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
