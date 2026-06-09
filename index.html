@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="GMWOda9cJcMaRGHHD06o5aYMpLItPn0E2kfis6mdqI4" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Distribuidora J-H S.A.S. ofrece carnes, pollo, pescado, huevos y lácteos frescos para negocios, restaurantes y tiendas.">
   <title>Distribuidora J-H S.A.S.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,28 +17,80 @@
 
 <body>
   <header>
-    <img src="assets/logoJH-pica.png" alt="Distribuidora J-H S.A.S." class="logo">
+    <a href="#inicio" class="brand" aria-label="Ir al inicio">
+      <img src="assets/logoJH-pica.png" alt="Distribuidora J-H S.A.S." class="logo">
+      <span>Distribuidora J-H</span>
+    </a>
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Quiénes Somos</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#inicio" aria-label="Inicio">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+      </a>
+      <a href="#nosotros" aria-label="Quiénes Somos">
+        <i class="fa-solid fa-users"></i>
+        <span>Quiénes Somos</span>
+      </a>
+      <a href="#productos" aria-label="Productos">
+        <i class="fa-solid fa-box-open"></i>
+        <span>Productos</span>
+      </a>
+      <a href="#contacto" aria-label="Contacto">
+        <i class="fa-solid fa-phone"></i>
+        <span>Contacto</span>
+      </a>
     </nav>
+    <a href="https://wa.me/573133200865" target="_blank" class="header-cta" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      Cotizar
+    </a>
   </header>
 
   <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Distribuidora J-H S.A.S.</h1>
-      <p>Calidad y frescura en carnes y embutidos al por mayor desde una perspectiva moderna y confiable.</p>
-      <a href="#contacto" class="btn">Contáctanos</a>
+      <span class="eyebrow">Alimentos frescos para clientes exigentes</span>
+      <h1>Frescura, calidad y cumplimiento en cada entrega</h1>
+      <p>
+        Somos el aliado de restaurantes, tiendas, empresas e instituciones que necesitan proteínas, lácteos y otros
+        alimentos frescos con abastecimiento confiable y atención cercana.
+      </p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Solicitar cotización</a>
+        <a href="#productos" class="btn btn-secondary">Ver productos</a>
+      </div>
+      <div class="trust-row" aria-label="Beneficios principales">
+        <span><i class="fa-solid fa-truck-fast"></i> Entregas ágiles</span>
+        <span><i class="fa-solid fa-shield-halved"></i> Calidad verificada</span>
+        <span><i class="fa-solid fa-handshake"></i> Atención personalizada</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats reveal" aria-label="Indicadores de confianza">
+    <div class="stat-card">
+      <strong>100%</strong>
+      <span>Compromiso con la cadena de frío</span>
+    </div>
+    <div class="stat-card">
+      <strong>5+</strong>
+      <span>Líneas de productos frescos</span>
+    </div>
+    <div class="stat-card">
+      <strong>24/7</strong>
+      <span>Canales abiertos para pedidos</span>
     </div>
   </section>
 
   <section id="nosotros" class="nosotros reveal">
-    <h2>Quiénes Somos</h2>
+    <div class="section-heading">
+      <span>Sobre nosotros</span>
+      <h2>Una distribuidora creada para cumplir</h2>
+      <p>
+        Combinamos productos frescos, proveedores confiables y una logística pensada para que tu negocio no se detenga.
+      </p>
+    </div>
 
     <div class="about">
-      <img src="assets/logoJH-pica.png" alt="logo" class="jh-img">
       <div class="about-text">
         <p>
           En <strong>Distribuidora J-H S.A.S.</strong> somos una empresa comprometida con la excelencia en la
@@ -68,13 +124,31 @@
           responsable y orgullosamente colombiana, comprometida con el desarrollo del sector alimenticio
           y con el bienestar de quienes confían en nuestros productos.
         </p>
+
+        <div class="feature-list">
+          <div>
+            <i class="fa-solid fa-temperature-low"></i>
+            <span>Conservación adecuada</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-clipboard-check"></i>
+            <span>Procesos responsables</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-route"></i>
+            <span>Logística eficiente</span>
+          </div>
+        </div>
       </div>
 
     </div>
   </section>
 
   <section id="mision-vision" class="misionvision reveal">
-    <h2>Misión y Visión</h2>
+    <div class="section-heading">
+      <span>Dirección empresarial</span>
+      <h2>Misión y Visión</h2>
+    </div>
     <div class="mv-container">
       <div class="mv-card">
         <i class="fa-solid fa-rocket icon"></i>
@@ -105,7 +179,11 @@
   </section>
 
   <section id="productos" class="products reveal">
-    <h2>Nuestros Productos</h2>
+    <div class="section-heading">
+      <span>Portafolio</span>
+      <h2>Nuestros Productos</h2>
+      <p>Seleccionamos categorías de alta rotación para negocios que necesitan inventario fresco y constante.</p>
+    </div>
 
     <div class="product-grid">
 
@@ -113,9 +191,11 @@
         <div class="product-card-inner">
           <div class="product-card-front">
             <img src="assets/carnes.png" alt="Carnes frescas" class="product-img">
+            <span class="product-badge">Premium</span>
             <h3>Carnes Selectas</h3>
           </div>
           <div class="product-card-back">
+            <i class="fa-solid fa-drumstick-bite"></i>
             <p>Cortes de res, cerdo y aves seleccionados bajo rigurosos estándares de calidad y frescura.</p>
           </div>
         </div>
@@ -124,10 +204,12 @@
       <div class="product-card">
         <div class="product-card-inner">
           <div class="product-card-front">
-            <img src="assets/embutidos.jpeg" alt="Carnes frescas" class="product-img">
+            <img src="assets/embutidos.jpeg" alt="Embutidos surtidos" class="product-img">
+            <span class="product-badge">Surtido</span>
             <h3>Embutidos Gourmet</h3>
           </div>
           <div class="product-card-back">
+            <i class="fa-solid fa-utensils"></i>
             <p>Variedad de embutidos elaborados con procesos tradicionales y sabores inigualables.</p>
           </div>
         </div>
@@ -136,10 +218,12 @@
       <div class="product-card">
         <div class="product-card-inner">
           <div class="product-card-front">
-            <img src="assets/queso.jpeg" alt="Carnes frescas" class="product-img">
+            <img src="assets/queso.jpeg" alt="Quesos y lácteos" class="product-img">
+            <span class="product-badge">Fresco</span>
             <h3>Lácteos y Quesos</h3>
           </div>
           <div class="product-card-back">
+            <i class="fa-solid fa-cheese"></i>
             <p>Productos lácteos frescos y quesos artesanales ideales para complementar tu mesa.</p>
           </div>
         </div>
@@ -148,10 +232,12 @@
       <div class="product-card">
         <div class="product-card-inner">
           <div class="product-card-front">
-            <img src="assets/huevos.jpeg" alt="Carnes frescas" class="product-img">
+            <img src="assets/huevos.jpeg" alt="Huevos frescos" class="product-img">
+            <span class="product-badge">Campo</span>
             <h3>Huevos del Campo</h3>
           </div>
           <div class="product-card-back">
+            <i class="fa-solid fa-egg"></i>
             <p>Garantía de frescura y alto valor nutricional en cada unidad seleccionada.</p>
           </div>
         </div>
@@ -160,12 +246,138 @@
     </div>
   </section>
 
+  <section class="sectors reveal">
+    <div class="section-heading">
+      <span>Cobertura institucional</span>
+      <h2>Sectores que atendemos</h2>
+      <p>Abastecemos organizaciones que requieren cumplimiento, trazabilidad y entregas confiables.</p>
+    </div>
+
+    <div class="sector-grid">
+      <article class="sector-card">
+        <i class="fa-solid fa-landmark"></i>
+        <h3>Instituciones públicas</h3>
+      </article>
+      <article class="sector-card">
+        <i class="fa-solid fa-building-shield"></i>
+        <h3>Centros penitenciarios</h3>
+      </article>
+      <article class="sector-card">
+        <i class="fa-solid fa-person-military-rifle"></i>
+        <h3>Unidades militares</h3>
+      </article>
+      <article class="sector-card">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Comedores institucionales</h3>
+      </article>
+      <article class="sector-card">
+        <i class="fa-solid fa-bowl-food"></i>
+        <h3>Restaurantes</h3>
+      </article>
+      <article class="sector-card">
+        <i class="fa-solid fa-hotel"></i>
+        <h3>Hoteles</h3>
+      </article>
+      <article class="sector-card">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Supermercados</h3>
+      </article>
+      <article class="sector-card">
+        <i class="fa-solid fa-store"></i>
+        <h3>Tiendas y minimercados</h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="coverage reveal">
+    <div class="coverage-content">
+      <div class="section-heading">
+        <span>Mapa de cobertura</span>
+        <h2>Presencia regional y cobertura nacional</h2>
+        <p>
+          Actualmente atendemos clientes en Cundinamarca, Tolima, Valle del Cauca y Nariño, con capacidad de
+          abastecimiento a nivel nacional.
+        </p>
+      </div>
+
+      <div class="coverage-list" aria-label="Departamentos con clientes actuales">
+        <span>Cundinamarca</span>
+        <span>Tolima</span>
+        <span>Valle del Cauca</span>
+        <span>Nariño</span>
+      </div>
+    </div>
+
+    <div class="coverage-map" aria-label="Cobertura nacional en Colombia">
+      <div class="map-image-frame">
+        <img src="assets/mapa-colombia.png" alt="Mapa de Colombia por departamentos">
+      </div>
+      <span class="map-pin pin-cundinamarca">Cundinamarca</span>
+      <span class="map-pin pin-tolima">Tolima</span>
+      <span class="map-pin pin-valle">Valle del Cauca</span>
+      <span class="map-pin pin-narino">Nariño</span>
+      <div class="national-badge">
+        <i class="fa-solid fa-location-dot"></i>
+        Cobertura nacional
+      </div>
+    </div>
+  </section>
+
+  <section class="process reveal">
+    <div class="section-heading">
+      <span>Cómo trabajamos</span>
+      <h2>Pedido simple, entrega confiable</h2>
+    </div>
+    <div class="process-grid">
+      <article>
+        <span>01</span>
+        <h3>Nos contactas</h3>
+        <p>Recibimos tu solicitud por WhatsApp, llamada o correo y entendemos lo que necesita tu negocio.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Preparamos tu pedido</h3>
+        <p>Seleccionamos productos frescos y coordinamos cantidades, tiempos y condiciones de entrega.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Entregamos</h3>
+        <p>Llevamos tu pedido con puntualidad, cuidado y seguimiento para que recibas exactamente lo acordado.</p>
+      </article>
+    </div>
+  </section>
 
   <section id="contacto" class="contact reveal">
-    <h2>Contáctanos</h2>
+    <div class="section-heading">
+      <span>Hablemos</span>
+      <h2>Solicita una cotización</h2>
+      <p>Cuéntanos qué productos necesitas y te ayudamos a cotizar rápidamente.</p>
+    </div>
 
     <div class="contact-container">
-      <!-- Left: Standard Info -->
+      <form class="quote-form" id="quoteForm">
+        <div class="form-header">
+          <span>Formulario de contacto</span>
+          <h3>Solicita una cotización</h3>
+          <p>Completa tus datos y enviaremos tu solicitud directamente por WhatsApp.</p>
+        </div>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="empresa">Empresa</label>
+        <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa o negocio">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto" required>
+
+        <label for="productosInteres">Productos de interés</label>
+        <textarea id="productosInteres" name="productosInteres" rows="4"
+          placeholder="Ej: carnes, pollo, huevos, lácteos..." required></textarea>
+
+        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+      </form>
+
       <div class="contact-card glass">
         <div class="contact-item">
           <i class="fa-solid fa-phone-volume"></i>
@@ -180,45 +392,42 @@
           <div>
             <h3>Correo Electrónico</h3>
             <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=distribucionesjmsas@gmail.com"
-                target="_blank">distribucionesjmsas@gmail.com</a></p>
+                target="_blank" rel="noopener">distribucionesjmsas@gmail.com</a></p>
           </div>
         </div>
-      </div>
 
-      <!-- Right: Action Buttons -->
-      <div class="contact-actions">
-        <a href="https://wa.me/573133200865" target="_blank" class="contact-btn whatsapp">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>WhatsApp Ventas 1</span>
-        </a>
-        <a href="https://wa.me/573104856614" target="_blank" class="contact-btn whatsapp">
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>WhatsApp Ventas 2</span>
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=distribucionesjmsas@gmail.com" target="_blank"
-          class="contact-btn email">
-          <i class="fa-solid fa-paper-plane"></i>
-          <span>Escríbenos un Correo</span>
-        </a>
+        <div class="contact-actions">
+          <a href="https://wa.me/573133200865" target="_blank" class="contact-btn whatsapp" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Ventas 1</span>
+          </a>
+          <a href="https://wa.me/573104856614" target="_blank" class="contact-btn whatsapp" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Ventas 2</span>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=distribucionesjmsas@gmail.com" target="_blank"
+            class="contact-btn email" rel="noopener">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Escríbenos un correo</span>
+          </a>
+        </div>
       </div>
     </div>
-  </section>
-  <!-- 🗺️ Mapa de Google
-
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps?q=Calle+45+%2312-34,+Bucaramanga,+Santander,+Colombia&output=embed"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div> -->
   </section>
 
 
   <footer>
+    <div class="footer-brand">
+      <img src="assets/logoJH-pica.png" alt="Distribuidora J-H S.A.S.">
+      <span>Distribuidora J-H S.A.S.</span>
+    </div>
     <p>© 2025 Distribuidora J-H S.A.S. Todos los derechos reservados.</p>
   </footer>
+
+  <a href="https://wa.me/573133200865" target="_blank" class="floating-whatsapp" aria-label="Contactar por WhatsApp"
+    rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <script src="script.js"></script>
 </body>
